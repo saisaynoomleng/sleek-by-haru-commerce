@@ -8,6 +8,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['@testing-library/js-dom/vitest'],
+    setupFiles: ['@testing-library/jest-dom/vitest'],
   },
 });
