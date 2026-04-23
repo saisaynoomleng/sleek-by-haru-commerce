@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌿 Sleek | Enterprise-Grade E-Commerce Ecosystem
 
-## Getting Started
+Sleek is a high-performance skincare platform designed to bridge the gap between digital retail and physical storefront operations. Unlike standard e-commerce templates, Sleek is architected to handle complex, real-world business requirements, including multi-location inventory tracking, a hybrid "Headless" content strategy, and a fully type-safe financial pipeline.
 
-First, run the development server:
+Key Architectural Pillars:
+• Hybrid Data Architecture: Utilizes PostgreSQL (Drizzle ORM) for high-frequency transactional data (inventory, orders, users) and Sanity CMS for marketing-led content (blogs, SEO, landing pages).
+• Multi-Store Logic: A sophisticated inventory schema that tracks product stock across multiple physical U.S. locations.
+• Polymorphic Media: A centralized media handling system for high-performance image delivery and management.
+• End-to-End Type Safety: Strict TypeScript implementation with Zod validation across the entire stack, from the database layer to the client-side UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- TailwindCSS/ShadCn
+- TypeScript/Zod
+- Clerk(authentication)
+- Stripe(Payment)
+- PostgreSQL(Database)
+- Sanity(CMS)
+- Vercel Blob(storage)
+- React Map GL
+- Resend(Email)
+- Drizzle(ORM)
+- Redis(Caching)
+- Vitest(testing)
+- Playwright(testing)
+- GSAP(animation)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Timeline
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 4/22/2026 => project research
