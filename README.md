@@ -34,4 +34,4 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 ## Project Timeline
 
 - 4/22/2026 => project research
-- 4/23/2026 => initialize project, DB setup, CMS setup
+- 4/23/2026 => initialize project, DB setup, CMS setup, development
