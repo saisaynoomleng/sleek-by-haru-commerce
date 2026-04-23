@@ -2,11 +2,12 @@
 
 Sleek is a high-performance skincare platform designed to bridge the gap between digital retail and physical storefront operations. Unlike standard e-commerce templates, Sleek is architected to handle complex, real-world business requirements, including multi-location inventory tracking, a hybrid "Headless" content strategy, and a fully type-safe financial pipeline.
 
-Key Architectural Pillars:
-• Hybrid Data Architecture: Utilizes PostgreSQL (Drizzle ORM) for high-frequency transactional data (inventory, orders, users) and Sanity CMS for marketing-led content (blogs, SEO, landing pages).
-• Multi-Store Logic: A sophisticated inventory schema that tracks product stock across multiple physical U.S. locations.
-• Polymorphic Media: A centralized media handling system for high-performance image delivery and management.
-• End-to-End Type Safety: Strict TypeScript implementation with Zod validation across the entire stack, from the database layer to the client-side UI.
+_Key Architectural Pillars_
+
+- Hybrid Data Architecture: Utilizes PostgreSQL (Drizzle ORM) for high-frequency transactional data (inventory, orders, users) and Sanity CMS for marketing-led content (blogs, SEO, landing pages).
+- Multi-Store Logic: A sophisticated inventory schema that tracks product stock across multiple physical U.S. locations.
+- Polymorphic Media: A centralized media handling system for high-performance image delivery and management.
+- End-to-End Type Safety: Strict TypeScript implementation with Zod validation across the entire stack, from the database layer to the client-side UI.
 
 ---
 
@@ -33,3 +34,4 @@ Key Architectural Pillars:
 ## Project Timeline
 
 - 4/22/2026 => project research
+- 4/23/2026 => initialize project, DB setup
