@@ -200,4 +200,23 @@
   body {
     @apply font-dm-sans bg-brand-white-50 text-brand-black-200 overflow-x-hidden leading-normal tracking-normal;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-none text-balance tracking-tighter;
+  }
+  p {
+    @apply text-pretty;
+  }
+}
+
+@utility form-error-message {
+  @apply italic text-fs-200 text-brand-red-600;
+}
+
+@utility form-label {
+  @apply after:absolute after:content-["*"] after:text-brand-red-600 after:ml-0.5 block;
 }
