@@ -8,6 +8,8 @@ export const env = createEnv({
     SANITY_STUDIO_DATASET: z.string().min(1),
     SANITY_STUDIO_PROJECT_ID: z.string().min(1),
     SANITY_READ_WRITE_TOKEN: z.string().startsWith('sk'),
+    CLERK_SECRET_KEY: z.string().startsWith('sk'),
+    CLERK_WEBHOOK_SIGNING_SECRET: z.string(),
   },
   experimental__runtimeEnv: process.env,
 });

@@ -15,6 +15,7 @@
     "sanity:typegen": "sanity schema extract --path=./src/sanity/extract.json && sanity typegen generate"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.2.5",
     "@neondatabase/serverless": "^1.1.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.22.0",

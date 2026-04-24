@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { dmSans } from '@/lib/fonts';
 import { Toaster } from 'sonner';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} antialiased`}>
       <body>
-        {children}
+        <ClerkProvider>{children}</ClerkProvider>
         <Toaster position="top-center" closeButton richColors />
       </body>
     </html>
