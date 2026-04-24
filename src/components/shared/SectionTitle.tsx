@@ -7,7 +7,12 @@ const SectionTitle = ({
   as: Comp = 'h3',
 }: SectionTitleProps) => {
   return (
-    <Comp className={clsx('text-fs-500 md:text-fs-600 font-medium', className)}>
+    <Comp
+      className={clsx(
+        'text-fs-500 md:text-fs-600 font-medium text-brand-teal-600',
+        className,
+      )}
+    >
       {children}
     </Comp>
   );
