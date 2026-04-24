@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import SanityImage from './SanityImage';
+import { afterEach } from 'node:test';
 
 vi.mock('next/image', () => ({
   default: (props: any) => <img {...props} />,
@@ -22,6 +23,9 @@ vi.mock('@/sanity/env', () => ({
 }));
 
 describe('SanityImage', () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
   it('should render image correctly', () => {
     render(
       <SanityImage

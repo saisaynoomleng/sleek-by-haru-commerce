@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { dmSans } from '@/lib/fonts';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="top-center" closeButton richColors />
+      </body>
     </html>
   );
 }

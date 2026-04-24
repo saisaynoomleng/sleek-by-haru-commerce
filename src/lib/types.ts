@@ -32,3 +32,24 @@ export type SanityImageProps = {
 export type SubmitButton = {
   className?: string;
 };
+
+// Store Card
+export type StoreCardProps = {
+  name: string;
+  city: string;
+  zip: string;
+  country: string;
+  street: string;
+  phone: string;
+  state: string;
+  className?: string;
+  id: string;
+  storeHour: { day: string; open_time: string; close_time: string }[];
+};
+
+// Prev Form States Props
+export type PrevFormStateProps = {
+  success: boolean;
+  message: string;
+  field?: string;
+};
