@@ -53,3 +53,11 @@ export type PrevFormStateProps = {
   message: string;
   field?: string;
 };
+
+// Navlink button
+export type NavLinkButtonProps = {
+  className?: string;
+  pathname: string;
+  href: string;
+  linkName: React.ReactNode;
+};
