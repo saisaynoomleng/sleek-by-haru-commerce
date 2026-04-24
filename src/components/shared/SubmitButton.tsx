@@ -4,7 +4,7 @@ import { useFormStatus } from 'react-dom';
 import { Button } from '../ui/button';
 import { LoadingSpinner } from './LoadingSpinner';
 
-const SubmitButton = () => {
+const SubmitButton = ({ className }: { className?: string }) => {
   const { pending } = useFormStatus();
 
   return (
@@ -13,6 +13,7 @@ const SubmitButton = () => {
       variant="submit"
       aria-label="submit button"
       disabled={pending}
+      className={className}
     >
       {pending ? (
         <span>

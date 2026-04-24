@@ -23,3 +23,16 @@ export const ClerkPayloadSchema = z.object({
     }),
   ),
 });
+
+export const AddressSchema = z.object({
+  address1: z.string().min(1, 'Address must have at least one character'),
+  address2: z.string().nullable().optional(),
+  zip: z.string().min(1, 'zip code must have at least one character'),
+  city: z.string().min(1, 'city must have at least one character'),
+  country: z.string().min(1, 'country must have at least one character'),
+  state: z.string().min(1, 'state must have at least one character'),
+  isDefault: z.preprocess((val) => val === 'true', z.boolean()),
+  type: z.enum(['billing', 'shipping', 'both']).default('billing'),
+});
+
+export type UserAddress = z.infer<typeof AddressSchema>;
