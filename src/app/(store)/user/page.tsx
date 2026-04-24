@@ -72,19 +72,41 @@ const UserPage = async () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <p className="font-medium">Last Name</p>
-              <p>{user.lastName}</p>
+              <p className="font-medium">Address 2</p>
+              <p>{user.addresses[0].address2}</p>
             </div>
 
             <div className="flex justify-between items-center">
-              <p className="font-medium">Email</p>
-              <p>{user.email}</p>
+              <p className="font-medium">City</p>
+              <p>{user.addresses[0].city}</p>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <p className="font-medium">Zip/Postal</p>
+              <p>{user.addresses[0].zip}</p>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <p className="font-medium">State</p>
+              <p>{user.addresses[0].state}</p>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <p className="font-medium">Country</p>
+              <p>{user.addresses[0].country}</p>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <p className="font-medium">Type</p>
+              <p>
+                {user.addresses[0].type === 'both'
+                  ? 'Billing, Shipping'
+                  : user.addresses[0].type}
+              </p>
             </div>
 
             <Button variant="link" asChild className="self-end">
-              <Link href="/user/update-personal-info">
-                Update Personal Info
-              </Link>
+              <Link href="/user/manage-addresses">Add new Address</Link>
             </Button>
           </div>
         ) : (
@@ -94,7 +116,7 @@ const UserPage = async () => {
             </p>
 
             <Button variant="link" asChild className="self-end">
-              <Link href="/user/manage-addresses">Update Addresses</Link>
+              <Link href="/user/manage-addresses">Add New Addresses</Link>
             </Button>
           </div>
         )}
