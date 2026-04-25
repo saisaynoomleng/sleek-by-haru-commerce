@@ -166,12 +166,24 @@ const SignInPage = () => {
 
         <div id="clerk-captcha" />
 
-        <p>
-          Not a member yet?
-          <Link href="/sign-up" className="underline hover:text-brand-pink-500">
-            Sign Up
+        <div className="flex justify-between items-center">
+          <p>
+            Not a member yet?
+            <Link
+              href="/sign-up"
+              className="underline hover:text-brand-pink-500"
+            >
+              Sign Up
+            </Link>
+          </p>
+
+          <Link
+            href="/forgot-password"
+            className="underline hover:text-brand-pink-500"
+          >
+            Forgot Password
           </Link>
-        </p>
+        </div>
       </form>
     </Bounded>
   );
