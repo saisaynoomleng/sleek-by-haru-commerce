@@ -45,7 +45,7 @@ export const handleUserAddressForm = async (
     if (!user) {
       return {
         success: false,
-        message: 'Something went wrong!',
+        message: 'Something went wrong! user not found',
       };
     }
 
@@ -84,7 +84,7 @@ export const handleUserAddressForm = async (
       }
     }
 
-    console.error(error);
+    console.error('not db error', error);
     return {
       success: false,
       message: 'Something went wrong! Try again later!',

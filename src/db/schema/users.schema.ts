@@ -13,7 +13,7 @@ export const UserTable = t.pgTable(
     firstName: t.varchar('first_name', { length: 255 }).notNull(),
     lastName: t.varchar('last_name', { length: 255 }).notNull(),
     email: t.varchar('email', { length: 255 }).notNull(),
-    imageUrl: t.varchar('image_url', { length: 255 }).notNull(),
+    imageUrl: t.varchar('image_url', { length: 255 }),
     status: UserStatus('status').notNull().default('user'),
     isDeleted: t.boolean('is_deleted').notNull().default(false),
     ...timestamp,

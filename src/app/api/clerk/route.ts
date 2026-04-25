@@ -10,7 +10,11 @@ export async function POST(req: NextRequest) {
     const event = await verifyWebhook(req);
     const eventType = event.type;
 
-    if (eventType === 'user.created' || eventType === 'user.updated') {
+    if (
+      eventType === 'user.created' ||
+      eventType === 'user.updated' ||
+      eventType === 'email.created'
+    ) {
       const { data } = event;
 
       const result = ClerkPayloadSchema.safeParse(data);
@@ -28,7 +32,7 @@ export async function POST(req: NextRequest) {
           firstName: first_name,
           lastName: last_name,
           email: email_addresses[0].email_address,
-          imageUrl: image_url,
+          imageUrl: image_url ?? '',
           clerkUserId: id,
           status: 'user',
         })

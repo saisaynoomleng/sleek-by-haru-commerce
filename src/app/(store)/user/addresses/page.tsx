@@ -16,7 +16,9 @@ const UserAddresses = async () => {
   const user = await db.query.UserTable.findFirst({
     where: eq(UserTable.clerkUserId, userId),
     with: {
-      addresses: true,
+      addresses: {
+        orderBy: (addresses, { desc }) => [desc(addresses.isDefault)],
+      },
     },
   });
 
@@ -32,7 +34,7 @@ const UserAddresses = async () => {
         <AddressCard key={address.id} {...address} />
       ))}
 
-      <Button variant="link" asChild className="self-end">
+      <Button variant="link" asChild>
         <Link href="/user/manage-addresses">Add New Addresses</Link>
       </Button>
     </Bounded>
