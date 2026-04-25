@@ -220,3 +220,7 @@
 @utility form-label {
   @apply after:absolute after:content-["*"] after:text-brand-red-600 after:ml-0.5 block;
 }
+
+@utility divider {
+  @apply w-[60%] h-px bg-brand-black-200/20;
+}

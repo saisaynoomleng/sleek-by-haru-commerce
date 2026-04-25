@@ -10,6 +10,8 @@ export type BoundedProps = {
 export type CTAProps = {
   className?: string;
   href: string;
+  children?: React.ReactNode;
+  variant?: 'arrow' | 'text';
 };
 
 // Section Title

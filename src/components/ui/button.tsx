@@ -19,7 +19,7 @@ const buttonVariants = cva(
         destructive:
           'bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40',
         link: 'bg-brand-black-200 text-brand-white-100 hover:bg-brand-black-100',
-        cta: 'bg-brand-black-100/20 rounded-full group hover:bg-brand-black-100 w-8 aspect-square',
+        cta: '',
         submit:
           'bg-brand-black-200 text-brand-white-100 hover:bg-brand-black-100',
       },
