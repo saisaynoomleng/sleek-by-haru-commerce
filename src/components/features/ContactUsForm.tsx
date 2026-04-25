@@ -22,6 +22,8 @@ const ContactUsForm = () => {
   );
 
   useEffect(() => {
+    if (!state.message) return;
+
     if (state.success) {
       toast.success(state.message);
     }
