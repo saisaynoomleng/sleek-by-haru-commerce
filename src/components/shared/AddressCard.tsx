@@ -1,4 +1,5 @@
 import { UserAddress } from '@/lib/validations';
+import clsx from 'clsx';
 
 const AddressCard = ({
   address1,
@@ -11,7 +12,12 @@ const AddressCard = ({
   isDefault,
 }: UserAddress) => {
   return (
-    <div className="border border-brand-teal-600 p-3 rounded-2xl flex flex-col gap-y-1">
+    <div
+      className={clsx(
+        'border  p-3 rounded-2xl flex flex-col gap-y-1',
+        isDefault ? 'border-brand-orange-600' : 'border-brand-teal-600',
+      )}
+    >
       <div className="flex justify-between items-center">
         <p className="font-medium">Address 1</p>
         <p>{address1}</p>
@@ -44,14 +50,18 @@ const AddressCard = ({
 
       <div className="flex justify-between items-center">
         <p className="font-medium">Type</p>
-        <p>{type === 'both' ? 'Billing, Shipping' : type}</p>
+        <p className="capitalize">
+          {type === 'both' ? 'Billing, Shipping' : type}
+        </p>
       </div>
 
       {isDefault && (
-        <div className="self-end px-2 py-1 bg-brand-teal-700 rounded-2xl text-fs-300 text-brand-white-100">
+        <div className="self-end px-4 py-1 bg-brand-teal-700 rounded-2xl text-fs-200 text-brand-white-100">
           <p>Default</p>
         </div>
       )}
+
+      {!isDefault && <div></div>}
     </div>
   );
 };
