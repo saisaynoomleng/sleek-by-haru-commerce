@@ -28,7 +28,7 @@ export const ReviewTable = t.pgTable(
   ],
 );
 
-export const ReviewTableRelations = relations(ReviewTable, ({ one, many }) => ({
+export const ReviewTableRelations = relations(ReviewTable, ({ one }) => ({
   user: one(UserTable, {
     fields: [ReviewTable.userId],
     references: [UserTable.id],

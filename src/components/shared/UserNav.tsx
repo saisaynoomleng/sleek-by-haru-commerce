@@ -1,7 +1,5 @@
 'use client';
 
-import clsx from 'clsx';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import NavLinkButton from './NavLinkButton';
 import { SignOutButton } from '@clerk/nextjs';
@@ -18,7 +16,7 @@ const UserNav = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex flex-col gap-y-2 p-2">
+    <header className="flex md:flex-col gap-y-2 p-2 max-md:overflow-auto max-md:gap-x-3">
       {USER_NAV_LINKS.map((link) => (
         <NavLinkButton
           key={link.url}

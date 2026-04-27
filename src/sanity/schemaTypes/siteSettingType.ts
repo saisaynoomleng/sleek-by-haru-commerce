@@ -1,4 +1,4 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { CiSettings } from 'react-icons/ci';
 import { sanitySlugifier } from './sanitySlugifier';
 

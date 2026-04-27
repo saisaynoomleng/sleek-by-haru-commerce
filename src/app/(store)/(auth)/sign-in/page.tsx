@@ -79,7 +79,7 @@ const SignInPage = () => {
         />
       </div>
 
-      <form onSubmit={handleSignIn} className="flex flex-col gap-y-5">
+      <form onSubmit={handleSignIn} className="flex flex-col gap-y-5 ">
         <SectionTitle className="text-center">Sign In</SectionTitle>
 
         <div className="flex justify-around items-center">
