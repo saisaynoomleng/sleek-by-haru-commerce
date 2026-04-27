@@ -13,7 +13,7 @@ describe('CTA', () => {
   });
 
   it('should render arrow icon', async () => {
-    render(<CTA href="/home" />);
+    render(<CTA variant="arrow" href="/home" />);
 
     const el = screen.getByRole('link', { name: /call to action/i });
 

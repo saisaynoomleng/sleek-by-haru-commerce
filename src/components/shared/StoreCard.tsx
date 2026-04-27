@@ -12,12 +12,7 @@ const StoreCard = ({
   phone,
   state,
   className,
-  storeHour,
 }: StoreCardProps) => {
-  const days = {
-    0: 'Sunday',
-  };
-
   return (
     <Link href={`/find-a-store/${id}`} className={clsx('', className)}>
       <p className="font-semibold">{name}</p>
@@ -29,12 +24,6 @@ const StoreCard = ({
       </p>
       <p>{country}</p>
       <p>{phone}</p>
-
-      <p>
-        {storeHour.map((store, i) => (
-          <span key={i}>{days[store.day]}</span>
-        ))}
-      </p>
     </Link>
   );
 };

@@ -2,7 +2,7 @@
 
 import { handleUserAddressForm } from '@/actions/handleUserAddressForm';
 import Form from 'next/form';
-import { useActionState, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { Input } from '../ui/input';
 import {
   Select,
@@ -15,6 +15,8 @@ import {
 } from '../ui/select';
 import SubmitButton from '../shared/SubmitButton';
 import { Checkbox } from '../ui/checkbox';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 const inititalFormState = {
   success: false,
@@ -27,11 +29,26 @@ const UserAddressForm = () => {
     handleUserAddressForm,
     inititalFormState,
   );
+  const router = useRouter();
 
   const [check, setCheck] = useState<boolean>(false);
   const [addressType, setAddressType] = useState<
     'billing' | 'shipping' | 'both'
   >('billing');
+
+  useEffect(() => {
+    if (!state.message) return;
+
+    if (state.success) {
+      toast.success(state.message);
+
+      router.push('/user/addresses');
+    }
+
+    if (!state.success) {
+      toast.error(state.message);
+    }
+  }, [state.message, state.success, router]);
 
   return (
     <Form action={actionFunction} className="flex flex-col gap-y-3">

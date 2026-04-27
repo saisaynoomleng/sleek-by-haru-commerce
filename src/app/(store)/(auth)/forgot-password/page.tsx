@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
 
 const ForgotPasswordPage = () => {
-  const { signIn, errors, fetchStatus } = useSignIn();
+  const { signIn, errors } = useSignIn();
   const router = useRouter();
 
   const [emailAddress, setEmailAddemailAddress] = useState<string>('');

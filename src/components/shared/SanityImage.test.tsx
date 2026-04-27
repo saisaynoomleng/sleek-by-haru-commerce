@@ -1,10 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import SanityImage from './SanityImage';
 import { afterEach } from 'node:test';
+import { ImgHTMLAttributes } from 'react';
 
 vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
+  default: (props: ImgHTMLAttributes<HTMLImageElement>) => (
+    <img {...props} alt={props.alt ?? ''} />
+  ),
 }));
 
 vi.mock('@/sanity/lib/image', () => ({
@@ -29,7 +34,7 @@ describe('SanityImage', () => {
   it('should render image correctly', () => {
     render(
       <SanityImage
-        alt="text alt"
+        alt="test alt"
         imageUrl="test"
         width={300}
         height={300}

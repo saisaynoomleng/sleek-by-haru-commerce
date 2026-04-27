@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} antialiased`}>
-      <body>
+      <body className="lg:max-w-300 lg:mx-auto">
         <ClerkProvider>{children}</ClerkProvider>
         <Toaster position="top-center" closeButton richColors />
       </body>

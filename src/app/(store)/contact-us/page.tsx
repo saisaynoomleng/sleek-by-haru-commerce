@@ -1,6 +1,5 @@
 import ContactUsForm from '@/components/features/ContactUsForm';
 import Bounded from '@/components/shared/Bounded';
-import SectionTitle from '@/components/shared/SectionTitle';
 import { sanityFetch } from '@/sanity/lib/live';
 import { MAIN_PAGE_QUERY } from '@/sanity/lib/query';
 import { Metadata } from 'next';

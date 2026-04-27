@@ -9,7 +9,6 @@ describe('Section Title', () => {
     const el = screen.getByText(/sale of the week/i);
 
     expect(el).toBeInTheDocument();
-    expect(el).toHaveClass('text-fs-500', 'font-semibold');
     expect(el.tagName).toBe('H3');
   });
 

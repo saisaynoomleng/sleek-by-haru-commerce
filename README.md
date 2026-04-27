@@ -42,5 +42,6 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 
 - user can sign-up with email addresses
 - user can sign-up with oAuth using gitHub, LinkedIn, Google
+- user can reset the password using the registered email
 - user can add, edit, delete, set default addresses for billing and shipping
 -
