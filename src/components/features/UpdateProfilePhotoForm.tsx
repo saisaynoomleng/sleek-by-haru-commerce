@@ -9,6 +9,7 @@ import SubmitButton from '../shared/SubmitButton';
 import Image from 'next/image';
 import { IoClose } from 'react-icons/io5';
 import { toast } from 'sonner';
+import { redirect } from 'next/navigation';
 
 const UpdateProfilePhotoForm = () => {
   const [state, actionFunction] = useActionState(handleUpdateProfilePhotoForm, {
@@ -46,6 +47,7 @@ const UpdateProfilePhotoForm = () => {
 
     if (state.success) {
       toast.success(state.message);
+      redirect('/user');
     }
 
     if (!state.success) {

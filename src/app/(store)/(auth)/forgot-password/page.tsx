@@ -133,6 +133,11 @@ const ForgotPasswordPage = () => {
         <form onSubmit={handleVerifyCode} className="flex flex-col gap-y-5">
           <SectionTitle className="text-center">Verify Code</SectionTitle>
 
+          <p>
+            We&apos;ve sent a code to
+            <span className="font-semibold"> {emailAddress}</span>
+          </p>
+
           <div className="space-y-1">
             <label htmlFor="code" className="form-label">
               Code

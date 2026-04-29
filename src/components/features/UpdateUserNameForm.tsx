@@ -6,6 +6,7 @@ import { useActionState, useEffect } from 'react';
 import { toast } from 'sonner';
 import { Input } from '../ui/input';
 import SubmitButton from '../shared/SubmitButton';
+import { redirect } from 'next/navigation';
 
 const UpdateUserNameForm = () => {
   const [state, actionFunction] = useActionState(handleUpdateUserNameForm, {
@@ -19,6 +20,7 @@ const UpdateUserNameForm = () => {
 
     if (state.success) {
       toast.success(state.message);
+      redirect('/user');
     }
 
     if (!state.success) {
