@@ -1,3 +1,4 @@
+import UpdateProfilePhotoForm from '@/components/features/UpdateProfilePhotoForm';
 import UpdateUserNameForm from '@/components/features/UpdateUserNameForm';
 import Bounded from '@/components/shared/Bounded';
 import SectionTitle from '@/components/shared/SectionTitle';
@@ -23,9 +24,17 @@ const UpdateUserInfo = async () => {
     <Bounded isPadded>
       <SectionTitle className="text-center">Update Profile Info</SectionTitle>
 
-      <UpdateUserNameForm />
+      <div className="space-y-2">
+        <p className="font-medium">Update Name</p>
+        <UpdateUserNameForm />
+      </div>
 
       <div className="divider mx-auto" />
+
+      <div className="space-y-2">
+        <p className="font-medium">Update Profile Picture</p>
+        <UpdateProfilePhotoForm />
+      </div>
     </Bounded>
   );
 };

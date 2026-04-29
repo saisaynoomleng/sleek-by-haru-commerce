@@ -34,7 +34,7 @@ const UserPage = async () => {
               width={100}
               height={100}
               loading="lazy"
-              className="rounded-full"
+              className="rounded-full w-25 aspect-square"
             />
           </div>
 
