@@ -124,7 +124,7 @@ const ContactUsForm = () => {
           )}
         </div>
 
-        <SubmitButton />
+        <SubmitButton>Send</SubmitButton>
       </div>
     </Form>
   );
