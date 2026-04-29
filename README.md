@@ -37,6 +37,7 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 - 4/23/2026 => initialize project, DB setup, CMS setup, development
 - 4/24/2026 => development
 - 4/25/2026 => development
+- 4/28/2026 => development
 
 ## Features
 
@@ -44,4 +45,4 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 - user can sign-up with oAuth using gitHub, LinkedIn, Google
 - user can reset the password using the registered email
 - user can add, edit, delete, set default addresses for billing and shipping
--
+- user can update firstName, lastName

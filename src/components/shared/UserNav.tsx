@@ -7,6 +7,7 @@ import { Button } from '../ui/button';
 
 const USER_NAV_LINKS = [
   { name: 'Personal Information', url: '/user' },
+  { name: 'Update Info', url: '/user/update-personal-info' },
   { name: 'Order History', url: '/user/purchase-history' },
   { name: 'Addresses', url: '/user/addresses' },
   { name: 'Password Manager', url: '/user/password-manager' },

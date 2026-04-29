@@ -4,7 +4,13 @@ import { useFormStatus } from 'react-dom';
 import { Button } from '../ui/button';
 import { LoadingSpinner } from './LoadingSpinner';
 
-const SubmitButton = ({ className }: { className?: string }) => {
+const SubmitButton = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
   const { pending } = useFormStatus();
 
   return (
@@ -20,7 +26,7 @@ const SubmitButton = ({ className }: { className?: string }) => {
           <LoadingSpinner data-testid="spinner" />
         </span>
       ) : (
-        <span>Submit</span>
+        <span>{children}</span>
       )}
     </Button>
   );

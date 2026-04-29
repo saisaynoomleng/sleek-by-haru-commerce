@@ -10,6 +10,8 @@ export const env = createEnv({
     SANITY_READ_WRITE_TOKEN: z.string().startsWith('sk'),
     CLERK_SECRET_KEY: z.string().startsWith('sk'),
     CLERK_WEBHOOK_SIGNING_SECRET: z.string(),
+    BLOB_READ_WRITE_TOKEN: z.string(),
+    BLOB_BASE_URL: z.string(),
   },
   experimental__runtimeEnv: process.env,
 });
