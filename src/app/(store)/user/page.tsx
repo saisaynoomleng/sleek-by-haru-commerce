@@ -53,12 +53,6 @@ const UserPage = async () => {
               <p className="font-medium">Email</p>
               <p>{user.email}</p>
             </div>
-
-            <Button variant="link" asChild className="self-end">
-              <Link href="/user/update-personal-info">
-                Update Personal Info
-              </Link>
-            </Button>
           </div>
         </div>
 
