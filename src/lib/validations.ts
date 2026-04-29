@@ -40,3 +40,7 @@ export const UpdateUserNameSchema = z.object({
   firstName: z.string().min(1, 'First name must have at least 1 character'),
   lastName: z.string().min(1, 'Last name must have at least 1 character'),
 });
+
+export const UpdateProfilePhotoSchema = z.object({
+  imageUrl: z.url().min(1, 'Invalid URL'),
+});

@@ -1,4 +1,3 @@
-import { env } from '@/lib/env/server';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {

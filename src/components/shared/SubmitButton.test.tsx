@@ -20,7 +20,7 @@ describe('Submit Button', () => {
       action: null,
     });
 
-    render(<SubmitButton />);
+    render(<SubmitButton>Submit</SubmitButton>);
 
     const el = screen.getByRole('button', { name: /submit button/i });
     const submitText = screen.getByText(/submit/i);
@@ -39,7 +39,7 @@ describe('Submit Button', () => {
       action: vi.fn() as unknown as (fromData: FormData) => void,
     });
 
-    render(<SubmitButton />);
+    render(<SubmitButton>Submit</SubmitButton>);
 
     const el = screen.getByRole('button', { name: /submit button/i });
     const spinner = screen.getByTestId('spinner');
