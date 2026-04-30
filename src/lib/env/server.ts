@@ -12,6 +12,8 @@ export const env = createEnv({
     CLERK_WEBHOOK_SIGNING_SECRET: z.string(),
     BLOB_READ_WRITE_TOKEN: z.string(),
     BLOB_BASE_URL: z.string(),
+    RESEND_ACCESS_TOKEN: z.string().startsWith('re'),
+    RESEND_EMAIL_FROM: z.string(),
   },
   experimental__runtimeEnv: process.env,
 });

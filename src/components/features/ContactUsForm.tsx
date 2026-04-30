@@ -50,7 +50,7 @@ const ContactUsForm = () => {
             id="fullName"
             placeholder="Fullname"
             name="fullName"
-            autoComplete="fullname"
+            autoComplete="name"
           />
           {!state.success && state.field === 'fullName' && (
             <p className="form-error-message" aria-errormessage={state.message}>
