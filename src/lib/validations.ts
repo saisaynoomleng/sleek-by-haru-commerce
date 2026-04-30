@@ -44,3 +44,7 @@ export const UpdateUserNameSchema = z.object({
 export const UpdateProfilePhotoSchema = z.object({
   imageUrl: z.url().min(1, 'Invalid URL'),
 });
+
+export const NewsletterFormSchema = z.object({
+  email: z.email().min(1, 'Must be a valid email address'),
+});

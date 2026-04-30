@@ -1,3 +1,4 @@
+import Footer from '@/components/shared/Footer';
 import MainNav from '@/components/shared/MainNav';
 
 const StoreLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
@@ -5,6 +6,7 @@ const StoreLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     <main>
       <MainNav />
       {children}
+      <Footer />
     </main>
   );
 };
