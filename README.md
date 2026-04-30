@@ -23,6 +23,7 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 - Vercel Blob(storage)
 - React Map GL
 - Resend(Email)
+- React Email
 - Drizzle(ORM)
 - Redis(Caching)
 - Vitest(testing)
@@ -46,4 +47,5 @@ Sleek is a high-performance skincare platform designed to bridge the gap between
 - user can sign-up with oAuth using gitHub, LinkedIn, Google
 - user can reset the password using the registered email
 - user can add, edit, delete, set default addresses for billing and shipping
-- user can update firstName, lastName
+- user can update firstName, lastName, profile photo
+- user can contact the website, and get instant notification upon receiving

@@ -1,5 +1,6 @@
 import ContactUsForm from '@/components/features/ContactUsForm';
 import Bounded from '@/components/shared/Bounded';
+import FeaturedPressBanner from '@/components/shared/FeaturedPressBanner';
 import { sanityFetch } from '@/sanity/lib/live';
 import { MAIN_PAGE_QUERY } from '@/sanity/lib/query';
 import { Metadata } from 'next';
@@ -35,7 +36,7 @@ const ContactUsPage = async () => {
   return (
     <Bounded isPadded>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-5 bg-brand-orange-100 rounded-2xl">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden hidden md:block">
           <Image
             src="/contact-us.jpg"
             alt=""
@@ -47,6 +48,7 @@ const ContactUsPage = async () => {
 
         <ContactUsForm />
       </div>
+      <FeaturedPressBanner />
     </Bounded>
   );
 };
