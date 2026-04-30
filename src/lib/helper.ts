@@ -51,3 +51,13 @@ export const generateSKU = (brand: string): string => {
 
   return `${normalizeBrand}${random}`;
 };
+
+export const formatTime = (time: string): string => {
+  const [hour, minute] = time.split(':');
+  const formatHour = Number(hour);
+
+  const period = formatHour >= 12 ? 'PM' : 'AM';
+  const formattedHour = formatHour % 12 || 12;
+
+  return `${formattedHour}:${minute} ${period}`;
+};

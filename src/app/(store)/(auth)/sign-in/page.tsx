@@ -145,21 +145,15 @@ const SignInPage = () => {
               {errors.fields.password.message}
             </p>
           )}
-          <button
-            type="button"
-            onClick={() => setShowPassword((open) => !open)}
-            className="absolute right-3 top-9 cursor-pointer"
-          >
-            {showPassword ? (
-              <span>
-                <IoEyeOffOutline />
-              </span>
-            ) : (
-              <span>
-                <IoEyeOutline />
-              </span>
-            )}
-          </button>
+          {password && (
+            <button
+              type="button"
+              onClick={() => setShowPassword((open) => !open)}
+              className="absolute right-3 top-9 cursor-pointer"
+            >
+              {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
+            </button>
+          )}
         </div>
 
         <Button className="col-span-full">Sign In</Button>
