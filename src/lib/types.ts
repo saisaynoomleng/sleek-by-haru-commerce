@@ -46,7 +46,7 @@ export type StoreCardProps = {
   state: string;
   className?: string;
   id: string;
-  storeHour: { day: string; open_time: string; close_time: string }[];
+  storeHour?: { day: string; open_time: string; close_time: string }[];
 };
 
 // Prev Form States Props
@@ -62,4 +62,12 @@ export type NavLinkButtonProps = {
   pathname: string;
   href: string;
   linkName: React.ReactNode;
+};
+
+// Store Hour
+export type StoreHourProps = {
+  dayOfWeek: number;
+  openTime: string;
+  closeTime: string;
+  isClosed: boolean;
 };

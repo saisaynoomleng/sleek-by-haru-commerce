@@ -13,8 +13,8 @@ export const StoreTable = t.pgTable('stores', {
   zip: t.varchar('zip', { length: 255 }).notNull(),
   phone: t.varchar('phone', { length: 255 }).notNull(),
   country: t.varchar('country', { length: 255 }).notNull(),
-  latitude: t.varchar('latitude', { length: 255 }).notNull(),
-  longitude: t.varchar('longitude', { length: 255 }).notNull(),
+  latitude: t.doublePrecision('latitude').notNull(),
+  longitude: t.doublePrecision('longitude').notNull(),
   ...timestamp,
 });
 

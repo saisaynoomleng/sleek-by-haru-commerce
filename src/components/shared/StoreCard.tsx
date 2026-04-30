@@ -14,7 +14,10 @@ const StoreCard = ({
   className,
 }: StoreCardProps) => {
   return (
-    <Link href={`/find-a-store/${id}`} className={clsx('', className)}>
+    <Link
+      href={`/find-a-store/${id}`}
+      className={clsx('border p-2 rounded-sm', className)}
+    >
       <p className="font-semibold">{name}</p>
       <p>
         {street}, {city}
